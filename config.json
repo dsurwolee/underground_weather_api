@@ -1,0 +1,30 @@
+{
+	"vars": {
+		"display": [
+			"city",
+			"state",
+			"country",
+			"zip"
+		],
+		"outer": [
+			"observation_time",
+			"weather",
+			"temp_f",
+			"temp_c",
+			"relative_humidity",
+			"wind_mph",
+			"precip_1hr_metric"
+		]
+	},
+	"locations": [
+		{
+			"city": "Washington",
+			"state": "DC"
+		},
+		{
+			"city": "Irvine",
+			"state": "CA"
+		}
+	]
+}
+
