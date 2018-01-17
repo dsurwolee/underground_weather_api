@@ -13,12 +13,17 @@
 ### Instruction
 
 ```
-1) In command line, source weather_api.sh
-2) Run 'create_db' to create a SQLite3 database
-3) Run 'get_data' to pull data from Underground Weather and update the db
+1) In command line, source weather_api.sh to export shell functions
+2) Run 'create_db' to create a SQLite3 database. This will create a db called "test.db" in the main path,
+3) Run 'get_data' to pull data from Underground Weather and update the db. Input your api key, path to the test.db and path to the config file in the config folder
 ```
 
-To auto-update table at a 60 minute increment the following shell function:
+To auto-update table at a 60 minute increment, run the following shell function:
 ```
 stream_data
+```
+
+To output the table into csv, run:
+```
+export_data
 ```

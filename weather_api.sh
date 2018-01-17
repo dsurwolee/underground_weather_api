@@ -4,7 +4,7 @@
 create_db()
 {
 	echo Creating table...
-	python create_db.py 
+	python data_pull/create_db.py 
 	echo Table created!
 }
 
@@ -16,7 +16,7 @@ get_data()
 	read -p 'Please enter your database path: ' db
 
 	echo Updating weather table...
-	python get_data.py $api $config $db
+	python data_pull/get_data.py $api $config $db
 	echo Update success! 
 }
 
@@ -37,7 +37,7 @@ stream_data()
 	read -p 'Please enter your database path: ' db
 
 	while true; do
-		python get_data.py $api $config $db
+		python data_pull/get_data.py $api $config $db
 		echo Weather table updated at date
 		sleep $[60 * 60]
 	done

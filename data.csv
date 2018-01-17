@@ -1,0 +1,3 @@
+city,state,country,zip,observation_time,weather,temp_f,temp_c,relative_humidity,wind_mph,precip_1hr_metric
+Washington,DC,US,20001,"Last Updated on January 17, 9:06 AM EST","Mostly Cloudy",24.3,-4.3,67%,5.1," 0"
+Irvine,CA,US,92602,"Last Updated on January 17, 6:06 AM PST",Clear,48.5,9.2,86%,0.0," 0"
