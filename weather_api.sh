@@ -15,9 +15,15 @@ get_data()
 	read -p 'Please enter the path to your config file: ' config
 	read -p 'Please enter your database path: ' db
 
-	echo Updating weather table...
-	python data_pull/get_data.py $api $config $db
-	echo Update success! 
+	if [ -z $api ] || [ -z $config ] || [ -z $db ]; 
+	then
+		echo "Missing api, config, or db values required to run the script!"
+		exit 1
+	else
+		echo Updating weather table...
+		python data_pull/get_data.py $api $config $db
+		echo Update success! 
+	fi
 }
 
 
@@ -36,9 +42,15 @@ stream_data()
 	read -p 'Please enter the path to your config file: ' config
 	read -p 'Please enter your database path: ' db
 
-	while true; do
-		python data_pull/get_data.py $api $config $db
-		echo Weather table updated at date
-		sleep $[60 * 60]
-	done
+	if [ -z $api ] || [ -z $config ] || [ -z $db ]; 
+	then
+		echo "Missing api, config, or db values required to run the script!"
+		exit 1
+	else
+		while true; do
+			python data_pull/get_data.py $api $config $db
+			echo Weather table updated at date
+			sleep $[60 * 60]
+		done
+	fi
 }
